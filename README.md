@@ -58,8 +58,13 @@ iotHubReader.startReadMessage(function (obj, date) {
 
 `azureCloudConnected` and `azureCloudIncomingMessage` is callback methods
 
-`AZURE_CONNECTIO` => ConnectionString - see portal.azure.com "IoT devices" -> {Your pi} -> "Connection string primary"
-`AZURE_DEVICEID` => see portal.azure.com "IoT devices" -> {Your pi}
+````javascript
+//ConnectionString - see portal.azure.com "IoT devices" -> {Your pi} -> "Connection string primary"
+const AZURE_CONNECTION 		= '>>ENTER<<'
+//portal.azure.com "IoT devices" -> {Your pi}
+const AZURE_DEVICEID 		= '>>ENTER<<'
+
+````
 
 ```javascript
 const IoTPi2Azure = require('./IoTPi2Azure.js')
