@@ -42,6 +42,8 @@ iotHubReader.startReadMessage(function (obj, date) {
 
 `getSensorData()` do return a object with the sensor data
 
+`azureCloudConnected` and `azureCloudIncomingMessage` is callback methods
+
 ```javascript
 const IoTPi2Azure = require('./IoTPi2Azure.js')
 
