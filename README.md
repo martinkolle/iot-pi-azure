@@ -5,7 +5,21 @@ Based on examples from https://github.com/Azure-Samples/azure-iot-samples-node
 
 # Azure
 
+
 ## Send data from Azure to Pi
+
+````javascript 
+//Should include sharedAccessKey - see "Settings" -> "Shared access policies"
+const AZURE_SHAREDKEY = '>>ENTER<<'
+
+//Consumer group - see "Settings" -> "Built in endpoints" in portal.azure.com
+const AZURE_CONSUMER_GROUP = '>>ENTER<<'
+
+//The device ID you have created you pi as
+const AZURE_DEVICEID = '>>ENTER<<'
+````
+
+
 ```javascript
 
 const IoTAzure2Pi = require('./IoTAzure2Pi.js')
@@ -43,6 +57,9 @@ iotHubReader.startReadMessage(function (obj, date) {
 `getSensorData()` do return a object with the sensor data
 
 `azureCloudConnected` and `azureCloudIncomingMessage` is callback methods
+
+`AZURE_CONNECTIO` => ConnectionString - see portal.azure.com "IoT devices" -> {Your pi} -> "Connection string primary"
+`AZURE_DEVICEID` => see portal.azure.com "IoT devices" -> {Your pi}
 
 ```javascript
 const IoTPi2Azure = require('./IoTPi2Azure.js')
